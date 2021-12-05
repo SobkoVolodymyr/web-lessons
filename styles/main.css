@@ -1,0 +1,12 @@
+a{
+    text-decoration: none;
+    color: #337ab7;
+}
+
+a:hover{
+    color: #be5000;
+}
+
+*{
+    font-family: Roboto;
+}

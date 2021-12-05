@@ -5,24 +5,321 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .red-text{
-
-    color: red;
-        }
-        .green-text{
-
-color:green;
-    }
-</style>
-
-
+    <link rel="stylesheet" href="../styles/03.css">
 </head>
 
 <body>
-    <p class ="red-text">Hello,world!</p>
-    <p style ="font-size: 35px; color: blue;">Hello,world!</p>
-    <p class ="green-text">Hello,world!</p>
+    <h1>Основні властивості CSS для роботи з текстом</h1>
+
+    <nav>
+        <ul>
+
+            <li><a href="#p1">Властивість font-size</a></li>
+            <li><a href="#p2">Властивість font-weight</a></li>
+            <li><a href="#p3">Властивість font-style</a></li>
+            <li><a href="#p4">Властивість font-family</a></li>
+            <li><a href="#p5">Властивість color</a></li>
+            <li><a href="#p6">Властивість text-transform</a></li>
+            <li><a href="#p7">Властивість text-decoration</a></li>
+
+        </ul>
+    </nav>
+
+    <h2 id="p1">Властивість font-size</h2>
+
+    <pre>
+    Визначає розмір елемента шрифту. Розмір може бути встановлений декількома способами. 
+    Набір констант <span class="red">(xx-small, x-small, small, medium, large, x-large, xx-large)</span> задає розмір, який називається абсолютним.
+    Інший набір констант <span class="red">(larger, smaller)</span> встановлює відносні розміри шрифту.
+    </pre>
+    
+    <h3>Синтаксис:</h3>
+
+    <h4>CSS</h4>
+    <div>
+        <code>
+
+            p{ <br>
+                font-size: 20px; <br>
+            } <br>
+
+        </code>
+    </div>
+
+    <h4>HTML</h4>
+
+    <div>
+        <code>
+
+            &lt;p&gt;Hello, world!&lt;/p&gt;
+
+        </code>
+    </div>
+
+    <h3>Результат:</h3>
+
+    <div>
+
+        <p style="font-size: 20px;">Hello,world!</p>
+
+    </div>
+
+    <h2 id="p2">Властивість font-weight</h2>
+
+    <pre>
+        Встановлює насиченість шрифту.
+        Значення вказується у вигляді чисел від 100 до 900 з кроком 100 або за допомогою ключових слів.
+        Насиченість шрифту задається за допомогою ключових слів: <span class="red">bold</span> - жирне зображення і <span class="red">normal</span> - нормальне зображення. 
+        Також допустимо використовувати умовні одиниці від 100 до 900. 
+        Значення <span class="red">bolder</span> та <span class="red">lighter</span> змінюють жирність щодо насиченості батька, відповідно, у більшу та меншу сторону.
+    </pre>
+
+    <h3>Синтаксис:</h3>
+
+    <h4>CSS</h4>
+
+    <div>
+        <code>
+
+            p{ <br>
+                font-weight: bolder; <br>
+            } <br>
+
+        </code>
+    </div>
+
+    <h4>HTML</h4>
+
+    <div>
+        <code>
+
+            &lt;p&gt;Hello, world!&lt;/p&gt;
+
+        </code>
+    </div>
+
+    <h3>Результат:</h3>
+    
+    <div>
+
+        <p style="font-weight: bolder;">Hello,world!</p>
+
+    </div>
+
+
+    <h2 id="p3">Властивість font-style</h2>
+
+    <pre>
+        Визначає зображення шрифту - звичайне, курсивне або похило. 
+        Коли для тексту встановлено курсивне або похилого зображення, браузер звертається до системи для пошуку відповідного шрифту. 
+        Якщо шрифт не знайдено, браузер використовує спеціальний алгоритм для імітації потрібного вигляду тексту.
+        <span class="red">normal</span> - Звичайне зображення тексту.
+        <span class="red">italic</span> - Курсивне зображення.
+        <span class="red">oblique</span> - Похиле накреслення. Курсив і похилий шрифт при всій їхній схожості не одне й те саме.
+        Курсив це спеціальний шрифт, що імітує рукописний, похилий утворюється шляхом нахилу звичайних знаків вправо.
+    </pre>
+
+    <h3>Синтаксис:</h3>
+
+    <h4>CSS</h4>
+
+    <div>
+        <code>
+
+            p{ <br>
+                font-style: italic; <br>
+            } <br>
+
+        </code>
+    </div>
+
+    <h4>HTML</h4>
+
+    <div>
+        <code>
+
+            &lt;p&gt;Hello, world!&lt;/p&gt;
+
+        </code>
+    </div>
+
+    <h3>Результат:</h3>
+    
+    <div>
+
+        <p style="font-style: italic;">Hello,world!</p>
+
+    </div>
+
+    <h2 id="p4">Властивість font-family</h2>
+
+    <pre>
+        Встановлює сімейство шрифту, яке використовуватиметься для оформлення тексту вмісту.
+        Список шрифтів може містити одну або кілька назв, розділених комою.
+        Коли браузер зустрічає перший шрифт у списку, він перевіряє наявність на комп'ютері користувача. 
+        Якщо такого шрифту немає, береться таке ім'я зі списку та також аналізується на присутність. 
+        Тому кілька шрифтів збільшує ймовірність, що хоча б один із них буде виявлено на клієнтському комп'ютері. 
+        Закінчують список зазвичай ключовим словом, яке описує тип шрифту - <span class="red"> serif, sans-serif, cursive, fantasy </span> чи <span class="red">monospace</span>.
+    </pre>
+
+    <h3>Синтаксис:</h3>
+
+    <h4>CSS</h4>
+
+    <div>
+        <code>
+
+            p{ <br>
+                font-family:Verdana, Geneva, Tahoma, sans-serif; <br>
+            } <br>
+
+        </code>
+    </div>
+
+    <h4>HTML</h4>
+
+    <div>
+        <code>
+
+            &lt;p&gt;Hello, world!&lt;/p&gt;
+
+        </code>
+    </div>
+
+    <h3>Результат:</h3>
+    
+    <div>
+
+        <p style="font-family:Verdana, Geneva, Tahoma, sans-serif">Hello,world!</p>
+
+    </div>
+
+    <h2 id="p5">Властивість color</h2>
+
+    <pre>
+        Визначає колір тексту елемента.
+        Ключові слова для кольору - це ідентифікатори без урахування регістру, що представляють певний колір, наприклад <span class="red">red, blue, black</span> або <span class="red">lightseagreen</span>. 
+        Хоча назви більш менш описують їх відповідні кольори, вони по суті штучні, без строгого обґрунтування використовуваних імен.
+    </pre>
+
+    <h3>Синтаксис:</h3>
+
+    <h4>CSS</h4>
+
+    <div>
+        <code>
+
+            p{ <br>
+                color: red; <br>
+            } <br>
+
+        </code>
+    </div>
+
+    <h4>HTML</h4>
+
+    <div>
+        <code>
+
+            &lt;p&gt;Hello, world!&lt;/p&gt;
+
+        </code>
+    </div>
+
+    <h3>Результат:</h3>
+    
+    <div>
+
+        <p style="color: red">Hello,world</p>
+
+    </div>
+
+    <h2 id="p6">Властивість text-transform</h2>
+
+    <pre>
+        Керує перетворенням тексту елемента у заглавні або прописні символи. 
+        Коли значення відрізняється від none, регістр вихідного тексту буде змінено.
+        <span class="red">capitalize</span> - Перший символ кожного слова в реченні буде великим. Інші символи свого вигляду не змінюють.
+        <span class="red">lowercase</span> - Усі символи тексту стають малими (нижній регістр).
+        <span class="red">uppercase</span> - Усі символи тексту стають великими (верхній регістр).
+        <span class="red">none</span> - Не змінює регістр символів.
+    </pre>
+
+    <h3>Синтаксис:</h3>
+
+    <h4>CSS</h4>
+
+    <div>
+        <code>
+
+            p{ <br>
+                text-transform: uppercase; <br>
+            } <br>
+
+        </code>
+    </div>
+
+    <h4>HTML</h4>
+
+    <div>
+        <code>
+
+            &lt;p&gt;Hello, world!&lt;/p&gt;
+
+        </code>
+    </div>
+
+    <h3>Результат:</h3>
+    
+    <div>
+
+        <p style="text-transform: uppercase;">Hello,world!</p>
+
+    </div>
+
+    <h2 id="p7">Властивість text-decoration</h2>
+
+    <pre>
+        Додає оформлення тексту як його підкреслення, перекреслення чи лінії над текстом. 
+        Одночасно можна застосувати більше одного стилю, перераховуючи значення через пропуск.
+        <span class="red">blink</span> - Встановлює миготливий текст. Такий текст періодично приблизно раз на секунду зникає, потім знову з'являється на колишньому місці. 
+        Це значення в даний час не підтримується браузерами і засуджується в CSS3, натомість рекомендується використовувати анімацію.
+        <span class="red">line-through</span> - Створює перекреслений текст.
+        <span class="red">overline</span> - Лінія проходить над текстом.
+        <span class="red">underline</span> - Встановлює підкреслений текст.
+        <span class="red">none</span> - Скасовує всі ефекти, у тому числі й підкреслення посилань, яке задано за замовчуванням.
+    </pre>
+
+    <h3>Синтаксис:</h3>
+
+    <h4>CSS</h4>
+
+    <div>
+        <code>
+
+            p{ <br>
+                text-decoration: overline; <br>
+            } <br>
+
+        </code>
+    </div>
+
+    <h4>HTML</h4>
+
+    <div>
+        <code>
+
+            &lt;p&gt;Hello, world!&lt;/p&gt;
+
+        </code>
+    </div>
+
+    <h3>Результат:</h3>
+    
+    <div>
+
+        <p style="text-decoration: overline;">Hello,world!</p>
+        
+    </div>
 </body>
 </html>
