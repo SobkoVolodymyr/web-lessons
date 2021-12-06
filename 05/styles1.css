@@ -1,0 +1,21 @@
+*{
+    font-family: 'Roboto' , sans-serif;
+}
+
+.back{
+    background-color: rgb(59, 62, 104);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+p{
+    color: white;
+    font-size: large;
+    background-color:rgb(87, 94, 156);
+    padding: 25px;
+}
+
+img{
+    height: 75px;
+}
