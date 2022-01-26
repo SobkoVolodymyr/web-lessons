@@ -1,0 +1,27 @@
+
+.box1{
+    box-sizing:border-box;
+    padding-top: 10px;
+    width: 150px;
+    height: 40px;
+    box-shadow: 1px 1px 1px 1px lightgrey;
+}
+.box1:hover{
+    background-color: #075ddfe0;
+    color: white;
+}
+
+p{
+    margin: 0;
+    color: rgba(30, 30, 148, 0.801);
+    text-align: center;
+ 
+}
+*{
+    font-family: Roboto;
+    margin: 0;
+}
+.h{
+    text-align: center;
+    color: red;
+}
